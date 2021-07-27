@@ -6,20 +6,31 @@ class CountryInstance :
     # 自作関数
     # self=インスタンス自身
     def info(self):
-        print(self.name)
+        return self.name+'('+ self.code+')'
+
+    # テスト
+    def area_size_min(self):
+        return (str(self.area*10000) + '平方km')
+
+    # 自動生成されるメソッド
+    def __init__(self):
+        print('自動生成です')
+
 
 
 # インスタンスを生成
-country0 = CountryInstance ()
-country1 = CountryInstance ()
-country2 = CountryInstance ()
-country3 = CountryInstance ()
-country4 = CountryInstance ()
-country5 = CountryInstance ()
-country6 = CountryInstance ()
-country7 = CountryInstance ()
-country8 = CountryInstance ()
-country9 = CountryInstance ()
+country0 = CountryInstance()
+country1 = CountryInstance()
+country2 = CountryInstance()
+country3 = CountryInstance()
+country4 = CountryInstance()
+country5 = CountryInstance()
+country6 = CountryInstance()
+country7 = CountryInstance()
+country8 = CountryInstance()
+country9 = CountryInstance()
+
+country_list = [country0,country1,country2,country3,country4,country5,country6,country7,country8,country9]
 
 # インスタンス変数の代入
 # 名前コード　リージョン　面積(万km2)　人口(万人) 首都 言語
@@ -31,7 +42,8 @@ country1.population = 139000
 country1.capital = '北京'
 country1.language = '漢語（中国語）'
 
-country1.info()
+print(country1.info())
+print(country1.area_size_min())
 
 # インスタンス変数の代入
 # 名前コード　リージョン　面積(万km2)　人口(万人) 首都 言語
