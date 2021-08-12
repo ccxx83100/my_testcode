@@ -1,21 +1,19 @@
 import tkinter
-import tkinter.messagebox
+import random
+
+
+def sai():
+    lab['text'] = random.randint(1,6)
+
 
 root = tkinter.Tk()
-root.title('PythonTEST.app')
-root.geometry('400x200')
-FNT = ('system', 30)
-a = tkinter.messagebox.askyesno('title' ,'Yes or No?')
-print(a)
-
-def btn1_on():
-    tkinter.messagebox.showinfo('title','clock on')
-
-
-
-'''
-bt1 = tkinter.Button(root, text=' ボタン ', font=FNT, command=btn1_on)
-bt1.pack()
-'''
+root.geometry('200x200')
+root.title('game_title')
+root['bg'] = 'black'
+FNT = ('system', 100)
+lab = tkinter.Label(text='1', font=FNT, bg='black', fg='lime')
+lab.pack()
+btn = tkinter.Button(text='サイコロ', command=sai)
+btn.pack()
 
 root.mainloop()
