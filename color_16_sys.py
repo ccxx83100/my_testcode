@@ -24,7 +24,7 @@ class App(tk.Frame):
                               to=255, command=self.scrl_method, length=200)
         self.scrl1.grid(row=0, column=1)
         self.scrl2 = tk.Scale(self, orient=tk.HORIZONTAL,
-                              to=255, command=self.scrl_method)
+                              to=255, command=self.scrl_method, length=200)
         self.scrl2.grid(row=1, column=1)
         self.scrl3 = tk.Scale(self, orient=tk.HORIZONTAL,
                               to=255, command=self.scrl_method)
@@ -35,7 +35,7 @@ class App(tk.Frame):
         self.ent1.grid(row=3, column=0, columnspan=2)
 
         # キャンバスエリア
-        self.cvs = tk.Canvas(self, bg='black', height=100)
+        self.cvs = tk.Canvas(self, bg='black', height=100, width=250)
         self.cvs.grid(row=4, column=0, columnspan=2)
 
     def scrl_method(self, event):
