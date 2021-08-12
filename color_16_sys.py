@@ -3,6 +3,12 @@ import tkinter as tk
 root = tk.Tk()
 root.title('main title')
 
+def hex2(num):
+    num2 = hex(num).replace('0x','')
+    if len(num) ==1:
+        num2 = '0' + num2
+    return num2
+
 
 class App(tk.Frame):
     def __init__(self, master=None):
@@ -39,8 +45,11 @@ class App(tk.Frame):
         self.cvs.grid(row=4, column=0, columnspan=2)
 
     def scrl_method(self, event):
-        pass
-
+        self.ent1.delete(0,50)
+        r = self.scrl1.get()
+        g = self.scrl2.get()
+        b = self.scrl3.get()
+        txt =''
 
 app = App()
 app.mainloop()
