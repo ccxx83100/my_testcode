@@ -34,6 +34,10 @@ class App(tk.Frame):
         self.ent1 = tk.Entry(self, width=50)
         self.ent1.grid(row=3, column=0, columnspan=2)
 
+        # キャンバスエリア
+        self.cvs = tk.Canvas(self, bg='black', height=100)
+        self.cvs.grid(row=4, column=0, columnspan=2)
+
     def scrl_method(self, event):
         pass
 
