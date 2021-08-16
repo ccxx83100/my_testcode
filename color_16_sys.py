@@ -6,7 +6,7 @@ root.title('main title')
 
 def hex2(num):
     num2 = hex(num).replace('0x', '')
-    if len(num) == 1:
+    if len(num2) == 1:
         num2 = '0' + num2
     return num2
 
@@ -50,10 +50,11 @@ class App(tk.Frame):
         r = self.scrl1.get()
         g = self.scrl2.get()
         b = self.scrl3.get()
-        txt = '(R,G,B) = ({},{},{}) = ({},{},{})'.format(
-            r, g, b, hex(r), hex(g), hex(b))
-        self.ent1.insert(0, txt)
         rgb = '#' + '{}{}{}'.format(hex2(r), hex2(g), hex2(b))
+        txt = '(R,G,B) = ({},{},{}) = ({},{},{}) : [{}]   '.format(
+            r, g, b, hex(r), hex(g), hex(b), rgb)
+        self.ent1.insert(0, txt)
+        print(rgb)
         self.cvs.configure(bg=rgb)
 
 
