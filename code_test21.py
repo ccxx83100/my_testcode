@@ -1,4 +1,3 @@
-from random import vonmisesvariate
 import tkinter
 import tkinter.filedialog
 
@@ -69,6 +68,9 @@ sc = tkinter.Scrollbar(fr, orient=tkinter.VERTICAL, command=te.yview)
 sc.pack(side=tkinter.RIGHT, fill=tkinter.Y)
 te.pack(expand=True, fill=tkinter.BOTH)
 te['yscrollcommand'] = sc.set
+
+fr2 = tkinter.Frame()
+fr2.pack()
 
 # メニューバー
 mbar = tkinter.Menu()
